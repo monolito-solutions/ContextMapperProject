@@ -1,0 +1,86 @@
+Domain LogisticaYEntregaDeBienes {
+	domainVisionStatement = "El modelo de dominio 'Logística y entrega de bienes' se enfoca en optimizar el proceso de entrega de bienes y paquetes, 
+							ofreciendo una solución integral que incluye planificación de rutas, entrega puntual de pedidos y entrega eficiente de bienes. 
+							Este modelo de dominio busca equilibrar los intereses de las empresas, agentes de entrega y consumidores, brindando un servicio 
+							confiable y eficiente que mejora el proceso de entrega."
+
+	Subdomain PlanificacionDeRutas {
+		type = 	CORE_DOMAIN
+	}
+
+	Subdomain EntregaDeDomicilios {
+		type = CORE_DOMAIN
+	}
+
+	Subdomain EntregaDePedidos {
+		type = CORE_DOMAIN
+	}
+
+	Subdomain IntegracionConServiciosDeEntregaDeTerceros {
+		type = CORE_DOMAIN
+	}
+
+	Subdomain RecibimientoYDespachoDeInventario {
+		type = SUPPORTING_DOMAIN
+	}
+
+	Subdomain AlmacenamientoYManejoDeInventarios {
+		type = SUPPORTING_DOMAIN
+	}
+
+	Subdomain FacilitacionDeLogistica {
+		type = SUPPORTING_DOMAIN
+	}
+
+	Subdomain EjecucionLogistica {
+		type = SUPPORTING_DOMAIN
+	}
+
+	Subdomain TrackingDeOrdenesYConductores {
+		type = GENERIC_SUBDOMAIN
+	}
+
+}
+
+Domain CompraYVentaDeProductosOnline {
+	domainVisionStatement = "El núcleo del dominio de 'Compra y venta de productos en línea' ofrece una solución integral para la gestión del comercio electrónico, 
+							incluyendo la gestión de mercado, tienda y ventas. Equilibra intereses de compradores y vendedores con una plataforma fácil de usar y 
+							herramientas avanzadas. Ofrece valor a minoristas y consumidores como una solución todo en uno."
+
+	Subdomain GestionDeTiendasMinoristas {
+		type = CORE_DOMAIN
+	}
+
+	Subdomain GestionDeMarketplace {
+		type = CORE_DOMAIN
+	}
+
+	Subdomain GestionDeVentasEnTiendasPropias {
+		type = CORE_DOMAIN
+	}
+}
+
+Domain PedidosDeComidaOnline {
+	domainVisionStatement = "El núcleo de dominio de los pedidos de comida en línea ofrece una solución fluida y eficiente para que los restaurantes y los 
+							supermercados gestionen sus pedidos. Proporciona una plataforma para que los clientes realicen pedidos de sus restaurantes y 
+							supermercados favoritos, con la comodidad de hacerlo desde su hogar o en cualquier lugar. Esta plataforma equilibra los intereses 
+							tanto de los clientes como de los propietarios de negocios. Al simplificar el proceso de pedido, el núcleo de dominio ayuda a los 
+							negocios a aumentar la eficiencia y la satisfacción del cliente, mientras brinda una experiencia conveniente para los clientes."
+
+	Subdomain GestionDePedidosEnRestaurantes {
+		type = CORE_DOMAIN
+	}
+
+	Subdomain GestionDePedidosEnSupermercados {
+		type = CORE_DOMAIN
+	}
+}
+
+Domain IntermediacionMonetaria {
+
+	domainVisionStatement = "El núcleo del dominio de intermediación monetaria ofrece una plataforma segura para la entrega de tarjetas de crédito y protege la información financiera sensible de los usuarios. Utiliza medidas de seguridad avanzadas para garantizar que las transacciones se realicen de manera segura y brinda tranquilidad a los usuarios. Esta solución es valiosa para aquellos que buscan un servicio financiero rápido y seguro."
+
+	Subdomain EntregaSeguraDeTarjetasDeCredito {
+		type = CORE_DOMAIN
+	}
+}

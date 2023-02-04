@@ -1,0 +1,79 @@
+ContextMap {
+    type = SYSTEM_LANDSCAPE
+    state = AS_IS
+
+    contains ServicioAlCliente
+    contains Storefront
+    contains Minoristas
+    contains Marketplace
+    contains Inbound
+    contains Outbound
+    contains ManejoInventariosYBodegas
+    contains Logistica
+    contains RestaurantesSupermercados
+    contains PlaneacionDeRutas
+    contains SistemaDeTrackingYMonitoreo
+    contains BancoLosAlpes
+
+    ServicioAlCliente [D,ACL]<-[U] Storefront
+    Storefront [U, S]->[D, C] Marketplace
+    Marketplace [D, C]<-[U, S] Minoristas
+
+    Inbound [U] -> [D, CF] ManejoInventariosYBodegas
+    ManejoInventariosYBodegas [U] -> [D, CF] Outbound
+    Outbound [U] -> [D, CF] Logistica
+    RestaurantesSupermercados [U] -> [D, CF] Logistica
+
+    BancoLosAlpes [U] -> [D, CF] Logistica
+    Logistica [U, OHS] -> PlaneacionDeRutas
+    Logistica [U, OHS] -> SistemaDeTrackingYMonitoreo
+
+}
+
+BoundedContext ServicioAlCliente {
+    domainVisionStatement = "Atención al cliente con respecto a PQRS y devoluciones"
+}
+
+BoundedContext Storefront {
+    domainVisionStatement = "Vista para visualizar los productos disponibles para la venta mediante una página web"
+}
+
+BoundedContext Marketplace {
+    domainVisionStatement = "Centro de administración de productos de AlpesOnline. En este contexto, se dan las compras y ventas principales de AlpesOnline"
+}
+
+BoundedContext Minoristas {
+    domainVisionStatement = "Portal para publicación y gestión de productos de minoristas"
+}
+
+BoundedContext Inbound {
+    domainVisionStatement = "Sistemas de cadena de suministro de entrada"
+}
+
+BoundedContext Outbound {
+    domainVisionStatement = "Servicios de salida encargados del empaquetamiento de los items en los centros de distribución"
+}
+
+BoundedContext ManejoInventariosYBodegas {
+    domainVisionStatement = "Administración del inventario, revisión de bodega y operación de centros de distribución"
+}
+
+BoundedContext Logistica {
+    domainVisionStatement = "Gestión logística y de integración de planeación de rutas y tracking para entrega de productos"
+}
+
+BoundedContext RestaurantesSupermercados {
+    domainVisionStatement = "Servicios de restaurantes y supermercados para domicilios de DomiciliosAlpes"
+}
+
+BoundedContext PlaneacionDeRutas {
+    domainVisionStatement = "Sistema de grafos con el objetivo de brindar las rutas óptimas para cada orden"
+}
+
+BoundedContext SistemaDeTrackingYMonitoreo {
+    domainVisionStatement = "Sistema de Tracking para saber en dónde y cuándo se encuentran los bienes transportados. De igual manera, sirve para monitorear los transportistas"
+}
+
+BoundedContext BancoLosAlpes {
+    domainVisionStatement = "Desarrollo a la medida para el servicio expuesto por el banco Los Alpes para el envío de tarjetas de crédito"
+}
