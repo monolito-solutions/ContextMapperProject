@@ -12,21 +12,24 @@ ContextMap {
 	contains ServicioDeAlmacenamientoConTerceros
 	contains ServicioDeBodegasDeTerceros
 	contains ServicioDeCentrosDeDistribucionDeTerceros
+	contains ServicioDeEnvios
+	contains ServicioEnvioConTerceros
+	contains ServicioDeIntegracionConServiciosDeEnvios
 	contains Logistica
 	contains RestaurantesSupermercados
 	contains PlaneacionDeRutas
 	contains SistemaDeTrackingYMonitoreo
 	contains BancoLosAlpes
 
-	ServicioAlCliente [D, ACL]<-[U] Storefront
+	ServicioAlCliente [D, ACL] <- [U] Storefront
 
-	Storefront [U, S]->[D, C] Marketplace
+	Storefront [U, S] -> [D, C] Marketplace
 
-	Marketplace [D, C]<-[U, S] Minoristas
+	Marketplace [D, C] <- [U, S] Minoristas
 
-	ServicioDeAlmacenamiento [D, ACL]<-[U] Marketplace
+	ServicioDeAlmacenamiento [D, ACL] <- [U] Marketplace
 
-	ServicioDeAlmacenamiento [U]->[D] Inbound
+	ServicioDeAlmacenamiento [U] -> [D] Inbound
 
 	Inbound [U] -> [D, CF] ManejoInventariosYBodegas
 
@@ -36,15 +39,23 @@ ContextMap {
     
     ServicioDeCentrosDeDistribucionDeTerceros [U] -> [D, ACL] ServicioDeAlmacenamientoConTerceros
 
-    // segunda parte
-
 	ManejoInventariosYBodegas [U] -> [D, CF] Outbound
 
 	Outbound [U] -> [D] Logistica
 
-	Logistica [U, OHS] -> PlaneacionDeRutas
+	Logistica [U] -> [D, ACL] PlaneacionDeRutas
 
-	Logistica [U, OHS] -> SistemaDeTrackingYMonitoreo
+	Logistica [U] -> [D, ACL] SistemaDeTrackingYMonitoreo
+
+	Logistica [U, S] -> [D, C] ServicioDeEnvios
+
+	PlaneacionDeRutas [U, S] -> [D, C] ServicioEnvioConTerceros
+
+	ServicioEnvioConTerceros [U] -> [D, ACL] ServicioDeIntegracionConServiciosDeEnvios
+
+	ServicioDeEnvios [U,OHS]->[D,ACL] RestaurantesSupermercados
+
+	ServicioDeEnvios [U,OHS]->[D,ACL] BancoLosAlpes
 }
 
 BoundedContext ServicioAlCliente {
@@ -109,4 +120,16 @@ BoundedContext ServicioDeBodegasDeTerceros {
 
 BoundedContext ServicioDeCentrosDeDistribucionDeTerceros {
     domainVisionStatement = "Servicio personalizado para cada servicio de distribución en especifico"
+}
+
+BoundedContext ServicioDeEnvios {
+    domainVisionStatement = "Contexto encargado de gestionar los servicios de envíos para terceros"
+}
+
+BoundedContext ServicioEnvioConTerceros {
+    domainVisionStatement = "Contexto encargado de gestionar el servicio de terceros para la planeación de envíos"
+}
+
+BoundedContext ServicioDeIntegracionConServiciosDeEnvios {
+    domainVisionStatement = "Servicio personalizado para cada servicio de mensajería en especifico"
 }
