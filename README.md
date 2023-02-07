@@ -18,7 +18,7 @@ Los archivos de la entrega se pueden encontrar en las siguientes rutas:
 # Anexos
 Todos los puntos se diseñaron y previsualizaron en un tablero de Miro, de izquierda a derecha se puede encontrar esquemas del primer, segundo y tercer ejercicio.
  
-[Link al tablero](https://miro.com/welcomeonboard/ak92dWNPNFlnMXp3TmM3R3dxeGhiY2VyT2lRa1FjZ3UydTQ4c0pRbGFyOGVnVW1GOTBKakw5NjZzak9FdDAxbHwzNDU4NzY0NTQ0Nzg3ODgyNTgwfDI=?share_link_id=806002726647)
+[Link al tablero](https://miro.com/app/board/uXjVPrNl2Ko=/?share_link_id=412246411214)
 
 # Gitpod
 La parte de ContextMapper fue realizada en Gitpod, se puede ejecutar el IDE mediante el siguiente botón:
