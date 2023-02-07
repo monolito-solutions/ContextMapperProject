@@ -5,7 +5,6 @@ ContextMap {
 	contains Storefront
 	contains Minoristas
 	contains Marketplace
-	contains ServicioDeAlmacenamiento
 	contains Inbound
 	contains Outbound
 	contains ManejoInventariosYBodegas
@@ -27,9 +26,7 @@ ContextMap {
 
 	Marketplace [D, C] <- [U, S] Minoristas
 
-	ServicioDeAlmacenamiento [D, ACL] <- [U] Marketplace
-
-	ServicioDeAlmacenamiento [U] -> [D] Inbound
+	Inbound [D, ACL] <- [U] Marketplace
 
 	Inbound [U] -> [D, CF] ManejoInventariosYBodegas
 
@@ -43,6 +40,8 @@ ContextMap {
 
 	Outbound [U] -> [D] Logistica
 
+	Inbound [SK]<->[SK] Outbound
+
 	Logistica [U] -> [D, ACL] PlaneacionDeRutas
 
 	Logistica [U] -> [D, ACL] SistemaDeTrackingYMonitoreo
@@ -53,9 +52,10 @@ ContextMap {
 
 	ServicioEnvioConTerceros [U] -> [D, ACL] ServicioDeIntegracionConServiciosDeEnvios
 
-	ServicioDeEnvios [U,OHS]->[D,ACL] RestaurantesSupermercados
+	ServicioDeEnvios [U,OHS, PL]->[D] RestaurantesSupermercados
 
-	ServicioDeEnvios [U,OHS]->[D,ACL] BancoLosAlpes
+	ServicioDeEnvios [U,OHS, PL]->[D] BancoLosAlpes
+
 }
 
 BoundedContext ServicioAlCliente {
@@ -104,10 +104,6 @@ BoundedContext SistemaDeTrackingYMonitoreo {
 
 BoundedContext BancoLosAlpes {
 	domainVisionStatement = "Desarrollo a la medida para el servicio expuesto por el banco Los Alpes para el envío de tarjetas de crédito"
-}
-
-BoundedContext ServicioDeAlmacenamiento {
-	domainVisionStatement = "Contexto encargado de gestionar el servicio de almacenamiento para terceros"
 }
 
 BoundedContext ServicioDeAlmacenamientoConTerceros {

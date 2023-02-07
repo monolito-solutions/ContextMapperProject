@@ -1,28 +1,28 @@
-![Context Mapper](https://raw.githubusercontent.com/wiki/ContextMapper/context-mapper-dsl/logo/cm-logo-github-small.png)
-# Context Mapper Demo for Online IDE 
-[![Build](https://github.com/ContextMapper/web-ide-demo/actions/workflows/build.yml/badge.svg)](https://github.com/ContextMapper/web-ide-demo/actions) [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/ContextMapper/web-ide-demo) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+# Entrega 1 - Diseño y Arquitectura de Dominio - Monolito Solutions
+Los archivos de la entrega se pueden encontrar en las siguientes rutas:
+1. Documentación de Dominios y Subdominios  
+`./src/main/cml/Domain.cml`
 
-Welcome to Context Mapper's demo repository. It illustrates how you can configure your own repository for the usage of Context Mapper in the online IDE [Gitpod](https://www.gitpod.io/).
+2. Documentación de lenguaje ubicuo:  
+`./domain-diagrams/Entregas de los Alpes - Lenguaje Ubicuo.pdf`
 
-## Start Using Context Mapper Now
-Start the online IDE and use Context Mapper right now:
+3. Documentación Contextos Acotados:  
+    ### AS IS:
+        - Imagen: ./domain-diagrams/BoundedContextAsIs_ContextMap.png
+        - Código: /src/main/cml/BoundedContextAsIs.cml  
+    ### TO BE:
+        - Imagen: ./domain-diagrams/BoundedContextToBe_ContextMap.png
+        - Código: /src/main/cml/BoundedContextToBe.cml
+
+
+# Anexos
+Todos los puntos se diseñaron y previsualizaron en un tablero de Miro, de izquierda a derecha se puede encontrar esquemas del primer, segundo y tercer ejercicio.
+ 
+[Link al tablero](https://miro.com/welcomeonboard/ak92dWNPNFlnMXp3TmM3R3dxeGhiY2VyT2lRa1FjZ3UydTQ4c0pRbGFyOGVnVW1GOTBKakw5NjZzak9FdDAxbHwzNDU4NzY0NTQ0Nzg3ODgyNTgwfDI=?share_link_id=806002726647)
+
+# Gitpod
+La parte de ContextMapper fue realizada en Gitpod, se puede ejecutar el IDE mediante el siguiente botón:
 
 <a href="https://gitpod.io/#https://github.com/monolito-solutions/ContextMapperProject" style="padding: 10px;">
     <img src="https://gitpod.io/button/open-in-gitpod.svg" width="150" alt="Push" align="center">
 </a>
-<br/><br/>
-
-## Open the Demo File
-In the folder `src/main/cml` you find a small **[CML demo](./src/main/cml/demo.cml)** (DDD sample application) where you can start to familiarize yourself with our DSL and our tools.
-You can find more info's about the tool and a complete documentation on our website [https://contextmapper.org/](https://contextmapper.org/).
-
-## Create Your Own Context Mapping Repository
-You can simply fork this repository and click the button above to start the online IDE for your repo.
-
-## Useful Links
- 
- * [More example models](https://github.com/ContextMapper/context-mapper-examples)
- * [CML language reference](https://contextmapper.org/docs/language-reference/)
- * [Rapid prototyping tutorial](https://contextmapper.org/docs/rapid-ooad/)
- * [Architectural Refactorings](https://contextmapper.org/docs/architectural-refactorings/)
- * [Generators](https://contextmapper.org/docs/generators/)

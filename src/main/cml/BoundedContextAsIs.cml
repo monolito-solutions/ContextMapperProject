@@ -25,8 +25,8 @@ ContextMap {
     RestaurantesSupermercados [U] -> [D, CF] Logistica
 
     BancoLosAlpes [U] -> [D, CF] Logistica
-    Logistica [U, OHS] -> PlaneacionDeRutas
-    Logistica [U, OHS] -> SistemaDeTrackingYMonitoreo
+    Logistica [U, OHS, PL] -> PlaneacionDeRutas
+    Logistica [U, OHS, PL] -> SistemaDeTrackingYMonitoreo
 
 }
 

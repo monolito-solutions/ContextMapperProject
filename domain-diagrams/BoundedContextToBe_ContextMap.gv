@@ -1,0 +1,107 @@
+digraph "ContextMapGraph" {
+graph ["imagepath"="/tmp/GraphvizJava"]
+"BancoLosAlpes" ["margin"="0.3","orientation"="222","shape"="egg","fontsize"="16","style"="bold","label"="BancoLosAlpes\n","fontname"="sans-serif"]
+"Inbound" ["margin"="0.3","orientation"="213","shape"="egg","fontsize"="16","style"="bold","label"="Inbound\n","fontname"="sans-serif"]
+"ManejoInventariosYBodegas" ["margin"="0.3","orientation"="69","shape"="egg","fontsize"="16","style"="bold","label"="ManejoInventariosYBodegas\n","fontname"="sans-serif"]
+"Outbound" ["margin"="0.3","orientation"="208","shape"="egg","fontsize"="16","style"="bold","label"="Outbound\n","fontname"="sans-serif"]
+"Logistica" ["margin"="0.3","orientation"="159","shape"="egg","fontsize"="16","style"="bold","label"="Logistica\n","fontname"="sans-serif"]
+"ServicioDeEnvios" ["margin"="0.3","orientation"="342","shape"="egg","fontsize"="16","style"="bold","label"="ServicioDeEnvios\n","fontname"="sans-serif"]
+"RestaurantesSupermercados" ["margin"="0.3","orientation"="18","shape"="egg","fontsize"="16","style"="bold","label"="RestaurantesSupermercados\n","fontname"="sans-serif"]
+"SistemaDeTrackingYMonitoreo" ["margin"="0.3","orientation"="347","shape"="egg","fontsize"="16","style"="bold","label"="SistemaDeTrackingYMonitoreo\n","fontname"="sans-serif"]
+"PlaneacionDeRutas" ["margin"="0.3","orientation"="206","shape"="egg","fontsize"="16","style"="bold","label"="PlaneacionDeRutas\n","fontname"="sans-serif"]
+"ServicioEnvioConTerceros" ["margin"="0.3","orientation"="125","shape"="egg","fontsize"="16","style"="bold","label"="ServicioEnvioConTerceros\n","fontname"="sans-serif"]
+"ServicioDeIntegracionConServiciosDeEnvios" ["margin"="0.3","orientation"="56","shape"="egg","fontsize"="16","style"="bold","label"="ServicioDeIntegracionConServiciosDeEnvios\n","fontname"="sans-serif"]
+"ServicioDeAlmacenamientoConTerceros" ["margin"="0.3","orientation"="200","shape"="egg","fontsize"="16","style"="bold","label"="ServicioDeAlmacenamientoConTerceros\n","fontname"="sans-serif"]
+"Marketplace" ["margin"="0.3","orientation"="319","shape"="egg","fontsize"="16","style"="bold","label"="Marketplace\n","fontname"="sans-serif"]
+"Minoristas" ["margin"="0.3","orientation"="156","shape"="egg","fontsize"="16","style"="bold","label"="Minoristas\n","fontname"="sans-serif"]
+"ServicioAlCliente" ["margin"="0.3","orientation"="144","shape"="egg","fontsize"="16","style"="bold","label"="ServicioAlCliente\n","fontname"="sans-serif"]
+"ServicioDeBodegasDeTerceros" ["margin"="0.3","orientation"="324","shape"="egg","fontsize"="16","style"="bold","label"="ServicioDeBodegasDeTerceros\n","fontname"="sans-serif"]
+"ServicioDeCentrosDeDistribucionDeTerceros" ["margin"="0.3","orientation"="197","shape"="egg","fontsize"="16","style"="bold","label"="ServicioDeCentrosDeDistribucionDeTerceros\n","fontname"="sans-serif"]
+"Storefront" ["margin"="0.3","orientation"="105","shape"="egg","fontsize"="16","style"="bold","label"="Storefront\n","fontname"="sans-serif"]
+"Inbound" -> "ManejoInventariosYBodegas" ["headlabel"=<<table cellspacing="0" cellborder="1" border="0">
+<tr><td bgcolor="white" sides="r">D</td><td sides="trbl" bgcolor="white"><font>CF</font></td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"Inbound" -> "Outbound" ["fontsize"="12","style"="bold","label"="Shared Kernel","dir"="none","fontname"="sans-serif"]
+"ManejoInventariosYBodegas" -> "Outbound" ["headlabel"=<<table cellspacing="0" cellborder="1" border="0">
+<tr><td bgcolor="white" sides="r">D</td><td sides="trbl" bgcolor="white"><font>CF</font></td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"ManejoInventariosYBodegas" -> "ServicioDeAlmacenamientoConTerceros" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"Outbound" -> "Logistica" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"Logistica" -> "ServicioDeEnvios" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="Customer/Supplier","dir"="none","fontname"="sans-serif"]
+"Logistica" -> "SistemaDeTrackingYMonitoreo" ["headlabel"=<<table cellspacing="0" cellborder="1" border="0">
+<tr><td bgcolor="white" sides="r">D</td><td sides="trbl" bgcolor="white"><font>ACL</font></td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"Logistica" -> "PlaneacionDeRutas" ["headlabel"=<<table cellspacing="0" cellborder="1" border="0">
+<tr><td bgcolor="white" sides="r">D</td><td sides="trbl" bgcolor="white"><font>ACL</font></td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"ServicioDeEnvios" -> "BancoLosAlpes" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="1" border="0">
+<tr><td bgcolor="white" sides="r">U</td><td sides="trbl" bgcolor="white"><font>OHS, PL</font></td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"ServicioDeEnvios" -> "RestaurantesSupermercados" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="1" border="0">
+<tr><td bgcolor="white" sides="r">U</td><td sides="trbl" bgcolor="white"><font>OHS, PL</font></td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"PlaneacionDeRutas" -> "ServicioEnvioConTerceros" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="Customer/Supplier","dir"="none","fontname"="sans-serif"]
+"ServicioEnvioConTerceros" -> "ServicioDeIntegracionConServiciosDeEnvios" ["headlabel"=<<table cellspacing="0" cellborder="1" border="0">
+<tr><td bgcolor="white" sides="r">D</td><td sides="trbl" bgcolor="white"><font>ACL</font></td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"Marketplace" -> "Inbound" ["headlabel"=<<table cellspacing="0" cellborder="1" border="0">
+<tr><td bgcolor="white" sides="r">D</td><td sides="trbl" bgcolor="white"><font>ACL</font></td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"Minoristas" -> "Marketplace" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="Customer/Supplier","dir"="none","fontname"="sans-serif"]
+"ServicioDeBodegasDeTerceros" -> "ServicioDeAlmacenamientoConTerceros" ["headlabel"=<<table cellspacing="0" cellborder="1" border="0">
+<tr><td bgcolor="white" sides="r">D</td><td sides="trbl" bgcolor="white"><font>ACL</font></td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"ServicioDeCentrosDeDistribucionDeTerceros" -> "ServicioDeAlmacenamientoConTerceros" ["headlabel"=<<table cellspacing="0" cellborder="1" border="0">
+<tr><td bgcolor="white" sides="r">D</td><td sides="trbl" bgcolor="white"><font>ACL</font></td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"Storefront" -> "Marketplace" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="Customer/Supplier","dir"="none","fontname"="sans-serif"]
+"Storefront" -> "ServicioAlCliente" ["headlabel"=<<table cellspacing="0" cellborder="1" border="0">
+<tr><td bgcolor="white" sides="r">D</td><td sides="trbl" bgcolor="white"><font>ACL</font></td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+}
